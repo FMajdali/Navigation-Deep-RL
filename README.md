@@ -22,3 +22,8 @@ Four discrete actions are available to the agent, corresponding to:
 -  Action 3: turn right
 ## Solving the environment
 The environment on hand is episodic, and to **solve the project successfully, the agent must get an average score of +13 over 100 consecutive episodes.**
+
+# Getting Started
+
+All the required libraries are there in the requirements.txt, there is an option to use the command **!pip -q install .** in the project Jupyter notebook provided by Udacity in the 
+workspace to do all the required installations. 
