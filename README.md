@@ -41,7 +41,7 @@ All the below hyperparamters below could be found in the dqn_agent.py:
 - The learning process will occuer at every n steps: **UPDATE_EVERY = 4**
 
 ## Nerual Network Architecture
-The nerual network recives the state which consist of 37 dimensions, then it process it with 4 fully connected layers of the size 64, each layer is applying a Relu activtion function on the output it passes to the next layer except the last on whcih outputs 4 (crossponding to the number of actions) units only
+The nerual network is written using pytorch, it recives the state which consist of 37 dimensions, then it process it with 4 fully connected layers of the size 64, each layer is applying a Relu activtion function on the output it passes to the next layer except the last on whcih outputs 4 outputs (crossponding to the number of actions)
 
 # Instructions
 ## Getting Started
@@ -56,5 +56,11 @@ project workspace to do all the required installations.
   - ReplayBuffer: fixed-size buffer to store experience tuples for the Experience Reply
 - **unityagents folder**: have the necessary files of the Unity environment
 - **Navigation.ipynb**: the project notebook provided by Udacity, it have all the code necessary to read the enviroment and train an agent, it have a class named dqn which handles the training process
--
-- **checkpoint.pth** have the trained model parametrs  
+
+# Solving the project
+The file **checkpoint.pth** has the trained model parametrs, the model have achived the desired rolling average of 13 on the **iteration**
+
+# Solution Enhancments
+- Nerual Network Architecture: it is an area to look into, as there might be an architecture that is more efficent in training with better performance then the provided
+- Prioritized Experience Replay could be introduced to focus more on expernces which could provide more knowledge to the model
+- Hyperparameters could be looked into using methods like Grid Search to enhance the learning process
