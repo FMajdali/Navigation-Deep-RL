@@ -39,6 +39,11 @@ All the below hyperparamters below could be found in the dqn_agent.py:
 - A learning paramter which soft update the target parametrs (1 makes the target identical to the trained model): **TAU = 1e-3**
 - Learning rate alpha: **LR = 5e-4**
 - The learning process will occuer at every n steps: **UPDATE_EVERY = 4**
+### Epsilon:
+- the epsilon hyperparameters are in the dqn class in the Navigation.ipynb:
+  - The number epsilon start with: **eps_start=1.0**
+  - The most minimum that epsilon could reach: **eps_end=0.01**
+  - The epsilon decying rate which is applied on epsilon at the end of each episode: **eps_decay=0.995** 
 
 ## Nerual Network Architecture
 The nerual network is written using pytorch, it recives the state which consist of 37 dimensions, then it process it with 4 fully connected layers of the size 64, each layer is applying a Relu activtion function on the output it passes to the next layer except the last on whcih outputs 4 outputs (crossponding to the number of actions)
