@@ -63,7 +63,9 @@ project workspace to do all the required installations.
 - **Navigation.ipynb**: the project notebook provided by Udacity, it have all the code necessary to read the enviroment and train an agent, it have a class named dqn which handles the training process
 
 # Solving the project
-The file **checkpoint.pth** has the trained model parametrs, the model have achived the desired rolling average of 13 on the **iteration**
+The file **checkpoint.pth** has the trained model parametrs, the model have achived the desired rolling average of 13 on the **iteration number 480**, the below plot show the training results per episode:
+
+/assets/training plot.jpg
 
 # Solution Enhancments
 - Nerual Network Architecture: it is an area to look into, as there might be an architecture that is more efficent in training with better performance then the provided
