@@ -25,5 +25,25 @@ The environment on hand is episodic, and to **solve the project successfully, th
 
 # Getting Started
 
-All the required libraries are there in the requirements.txt, there is an option to use the command **!pip -q install .** in the project Jupyter notebook provided by Udacity in the 
-workspace to do all the required installations. 
+All the required libraries are there in the requirements.txt, there is an option to use the command **!pip -q install .** in the Jupyter notebook provided by Udacity in the 
+project workspace to do all the required installations. 
+
+# Learning Algorithem
+## Quick Explanation
+The utilized algorithem in this project is **Deep Q Network** where a neural network is trained to become an approximator of the optimal action-value function. Reinforcement Learning is notoriously unstable when neural networks are used to represent the action-value function.
+
+Therefore, two main techniques are used to train the network:
+-  Experience Reply: a memory is used to store the experncies, then every n-runs the learning occurs on a random sample of the memory to break correlations and provide stability
+-  Fixed Q-Targets: Moving the target at every multiple steps instead of changing it every step which cause oscillation, this could be done by creating another network with another set of weights, every multiple steps the target steps gets a soft update to become more similar to the first neural network
+
+## Hyperparameters
+All the below hyperparamters below could be found in the dqn_agent.py:
+- Experience reply memory size: **BUFFER_SIZE = int(1e5)**
+- The number of sampled experince tubles at each learning step: **BATCH_SIZE = 64**
+- The discount factor applied on the action-value function of the next state: **GAMMA = 0.99**
+- A learning paramter which soft update the target parametrs (1 makes the target identical to the trained model): **TAU = 1e-3**
+- Learning rate alpha: **LR = 5e-4**
+- The learning process will occuer at every n steps: **UPDATE_EVERY = 4**
+
+## Nerual Network Architecture
+The nerual network recives the state which consist of 37 dimensions, then it process it with 4 fully connected layers of the size 64, each layer is applying a Relu activtion function on the output it passes to the next layer except the last on whcih outputs 4 (crossponding to the number of actions) units only
