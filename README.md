@@ -23,11 +23,6 @@ Four discrete actions are available to the agent, corresponding to:
 ## Solving the environment
 The environment on hand is episodic, and to **solve the project successfully, the agent must get an average score of +13 over 100 consecutive episodes.**
 
-# Getting Started
-
-All the required libraries are there in the requirements.txt, there is an option to use the command **!pip -q install .** in the Jupyter notebook provided by Udacity in the 
-project workspace to do all the required installations. 
-
 # Learning Algorithem
 ## Quick Explanation
 The utilized algorithem in this project is **Deep Q Network** where a neural network is trained to become an approximator of the optimal action-value function. Reinforcement Learning is notoriously unstable when neural networks are used to represent the action-value function.
@@ -47,3 +42,19 @@ All the below hyperparamters below could be found in the dqn_agent.py:
 
 ## Nerual Network Architecture
 The nerual network recives the state which consist of 37 dimensions, then it process it with 4 fully connected layers of the size 64, each layer is applying a Relu activtion function on the output it passes to the next layer except the last on whcih outputs 4 (crossponding to the number of actions) units only
+
+# Instructions
+## Getting Started
+
+All the required libraries are there in the requirements.txt, there is an option to use the command **!pip -q install .** in the Jupyter notebook provided by Udacity in the 
+project workspace to do all the required installations. 
+
+## How to train the agent
+- **model.py**: include a class named QNetwork which include the architecture of the neural network, any modification to the architecture could be done here
+- **dqn_agent.py**: include two classes:
+  - Agent: interacts with and learns from the environment, it has multiple methods to facilitate the learning process
+  - ReplayBuffer: fixed-size buffer to store experience tuples for the Experience Reply
+- **unityagents folder**: have the necessary files of the Unity environment
+- **Navigation.ipynb**: the project notebook provided by Udacity, it have all the code necessary to read the enviroment and train an agent, it have a class named dqn which handles the training process
+-
+- **checkpoint.pth** have the trained model parametrs  
