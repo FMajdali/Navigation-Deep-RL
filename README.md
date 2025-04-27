@@ -65,7 +65,7 @@ project workspace to do all the required installations.
 # Solving the project
 The file **checkpoint.pth** has the trained model parametrs, the model have achived the desired rolling average of 13 on the **iteration number 480**, the below plot show the training results per episode:
 
-/assets/training plot.jpg
+![alt text](https://github.com/FMajdali/Navigation-Deep-RL/blob/main/training%20plot.jpg))
 
 # Solution Enhancments
 - Nerual Network Architecture: it is an area to look into, as there might be an architecture that is more efficent in training with better performance then the provided
